@@ -8,12 +8,17 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`zubin`, `dog`]} />
-    <h1>Zubin!</h1>
-    <p>Welcome to zubin.io</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    <p>
+      This site is a sandbox for my web experiments. 
+      It's also a tribute to my old dog Zubin who 
+      passed away in 2017.
+    </p>
+    <div style={{ maxWidth: `500px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <p>
+      Learn about <Link to="/compound-interest/">compound interest</Link> 
+    </p>
   </Layout>
 )
 
