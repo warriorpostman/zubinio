@@ -17,19 +17,16 @@ import './index.css';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`zubin`, `dog`]} />
-    <p>
-    </p>
     <div className="index-container">
-      <div style={{ 
-        // maxWidth: `500px`, 
-        // marginBottom: `1.45rem` 
-        }}>
+      <div>
       <Card>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             Zubin
           </Typography>
-          <Image />
+          <div className="zubin-pic">
+            <Image  />
+          </div>
           This site is a sandbox for some web experiments. 
           It's also a tribute to my old dog Zubin who 
           passed away in 2017.
