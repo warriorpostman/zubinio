@@ -1,0 +1,7 @@
+.chart-wrapper {
+  border: 1px solid black;
+}
+
+.chart-wrapper svg {
+  border: 1px solid green;
+}

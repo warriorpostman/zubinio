@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.0.0-rc.0",
+    "d3-axis": "^1.0.12",
     "d3-scale": "^2.2.2",
     "d3-selection": "^1.4.0",
     "gatsby": "^2.1.27",
@@ -15,6 +17,7 @@
     "gatsby-plugin-sharp": "^2.0.25",
     "gatsby-source-filesystem": "^2.0.23",
     "gatsby-transformer-sharp": "^2.1.15",
+    "lodash": "^4.17.11",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
