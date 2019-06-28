@@ -43,6 +43,15 @@ const IndexPage = () => (
           calculating <Link to="/compound-interest/">compound interest</Link> 
         </CardContent>
       </Card>
+      <Card>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            `flexbox`
+          </Typography>
+          A simple demo of flexbox because I still don't get it...
+          <Link to="/flexbox/">flexbox</Link> 
+        </CardContent>
+      </Card>
     </div>
     </div>
   </Layout>
