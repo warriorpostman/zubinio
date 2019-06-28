@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Button, TextField, InputLabel } from '@material-ui/core';
 import { Link } from 'gatsby'
 
-
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
@@ -12,20 +11,30 @@ const FirstBox = styled.div`
   font-family: 'Verdana';
   font-size: larger;
   color: white;
-  padding: 1rem;
-  margin: 1rem;
+  padding: .5rem;
+  margin: .25rem;
   width: 10%;
   flex: ${props => props.boxValue};
   background-color: blue;
 `;
 
 const Daddy = styled.div`
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-top: 1rem;
+  border: 1px solid;
+  margin-left: .5rem;
+  margin-right: .5rem;
   display: flex;
   flex-direction: ${(props) => props.direction};
 `;
 
+const InputBar = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+const InputWrapper = styled.div`
+  flex: 1
+  padding: 1rem;
+`;
 
 const Flexbox = () => {
   const [direction, setDirection] = useState('row');
@@ -44,44 +53,36 @@ const Flexbox = () => {
       <p>
         Flexbox is sweet, or so I'm told.
       </p>
-      <Button 
-        onClick={(e) => {
-        console.log('whatup', e.target.value);
-        setDirection(direction === 'column' ? 'row' : 'column');
-        }}
-      >
-        Direction?
-      </Button>
-      <InputLabel htmlFor="box1">BOX 1</InputLabel>
-      <TextField 
-        id="box1"
-        type="text"
-        value={boxValue.box1}
-        onChange={(e) => { 
-        setBoxValue({ ...boxValue, box1: e.target.value })
+      <h4>Flex values</h4>
+      <InputBar>
+      { [1, 2, 3, 4, 5, 6].map(index => 
+        <InputWrapper>
+          <InputLabel htmlFor="box1">BOX {index}</InputLabel>
+          <TextField 
+            id={`box${index}`}
+            type="text"
+            value={boxValue[`box${index}`]}
+            onChange={(e) => { 
+            setBoxValue({ ...boxValue, [`box${index}`]: e.target.value })
+            }
+            }
+          />
+        </InputWrapper>
+        )
         }
-        }
-      />
-      <InputLabel htmlFor="box1">BOX 2</InputLabel>
-      <TextField 
-        id="box2"
-        type="text"
-        value={boxValue.box2}
-        onChange={(e) => { 
-        setBoxValue({ ...boxValue, box2: e.target.value })
-        }
-        }
-      />
-      <InputLabel htmlFor="box1">BOX 3</InputLabel>
-      <TextField 
-        id="box3"
-        type="text"
-        value={boxValue.box3}
-        onChange={(e) => { 
-        setBoxValue({ ...boxValue, box3: e.target.value })
-        }
-        }
-      />
+        <InputWrapper>
+          <Button 
+            primary
+            alt="Toggle the flex direction"
+            onClick={(e) => {
+            console.log('whatup', e.target.value);
+            setDirection(direction === 'column' ? 'row' : 'column');
+            }}
+          >
+            Direction?
+          </Button>
+        </InputWrapper>
+      </InputBar>
 
       <Daddy 
         direction={direction}
