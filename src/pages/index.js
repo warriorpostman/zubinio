@@ -21,15 +21,19 @@ const IndexPage = () => (
       <div>
       <Card>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Zubin
+          { false &&
+          <Typography gutterBottom variant="h3" component="h1">
+            Zubin.IO
           </Typography>
+          }
           <div className="zubin-pic">
             <Image  />
           </div>
-          This site is a sandbox for some web experiments. 
-          It's also a tribute to my old dog Zubin who 
-          passed away in 2017.
+          <p>
+            This site is a sandbox for some web experiments. 
+            It's also a tribute to my old dog Zubin who 
+            passed away in 2017.
+          </p>
         </CardContent>
       </Card>
     </div>
@@ -43,15 +47,17 @@ const IndexPage = () => (
           calculating <Link to="/compound-interest/">compound interest</Link> 
         </CardContent>
       </Card>
-      <Card>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            `flexbox`
-          </Typography>
-          A simple demo of flexbox because I still don't get it...
-          <Link to="/flexbox/">flexbox</Link> 
-        </CardContent>
-      </Card>
+      <div className="index-card-wrapper">
+        <Card>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              `flexbox`
+            </Typography>
+            A simple demo of flexbox because I still don't get it...
+            <Link to="/flexbox/">flexbox</Link> 
+          </CardContent>
+        </Card>
+      </div>
     </div>
     </div>
   </Layout>

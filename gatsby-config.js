@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Zubin (io)`,
+    title: `Zubin(io)`,
     description: `Zubin was my ol' dog who passed away in 2017`,
     author: `Rustam Kasad`,
   },
