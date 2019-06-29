@@ -51,7 +51,9 @@ const Flexbox = () => {
         ]
         } />
       <p>
-        Flexbox is sweet, or so I'm told.
+        Flexbox is sweet, or so I'm told. This is a simple demonstration 
+        of `flexbox`. You can modify the parameters below to try out 
+        different layouts.
       </p>
       <h4>Flex values</h4>
       <InputBar>
