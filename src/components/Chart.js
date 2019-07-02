@@ -26,14 +26,16 @@ class Chart extends Component {
     const node = this.node
     const yearCount = this.props.data.length;
     const dataMax = max(this.props.data)
-    const superMax = 1 * 1000 * 1000;
-    const ratio = (dataMax/superMax) * this.props.size[1];
+    // const superMax = 1 * 1000 * 1000;
+    const superMax = 10 * 1000; 
+    const yCeiling  = this.props.size[1];
+    console.log({ dataMax, yCeiling });
+    const ratio = (1/superMax) * yCeiling;
     console.log({ dataMax, ratio });
     const yScale = scaleLinear()
-       .domain([0, dataMax + 10])
-      .range([0, this.props.size[1]])
+      .domain([0, dataMax + 10])
+      .range([0, yCeiling])
         // (dataMax/this.props.size[1])
-
 
     select(node)
       .selectAll('rect')
@@ -51,22 +53,26 @@ class Chart extends Component {
     select(node)
       .selectAll('rect')
       .data(this.props.data)
-      .style('fill', 'orange')
+      .style('fill', '#0080ff')
       .attr('x', (d,i) => i * 30)
       .attr('y', d => {
         const theSize = this.props.size[1];
         const theScale = yScale(d);
-        // console.log('wut?', theSize, theScale, theSize - theScale);
+        // console.log('scale: ', yScale(d));
         // console.log('size - scale', theSize - theScale);
         return (theSize - theScale);
       })
-      .attr('height', d => yScale(d))
-      .attr('width', 25);
+      .attr('height', d => 
+        // 1000
+        // 300
+        yScale(d)
+      )
+      .attr('width', 20);
 
     const yAxis = axisLeft(yScale).ticks(10);
     select(node)
       .append('g')
-      .attr("transform", "translate(0," + this.props.size[1] + ")")
+      .attr("transform", `translate(0, ${this.props.size[1]})`)
       .call(yAxis);
 
      // var yAxis = axis()
