@@ -28,6 +28,12 @@ progress,
 video {
   display: inline-block;
 }
+header {
+  /* background-color: #1E3A55; */
+  /* #DD8436; */
+  /* background-color: #A4B7AD; */
+}
+
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -60,9 +66,21 @@ strong {
 dfn {
   font-style: italic;
 }
+p {
+  padding-left: 1rem;
+  font-family: Roboto;
+  font-size: 1.2rem;
+  color: #1E3A55;
+}
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  /* font-size: 2em; */
+  /* margin: 2em 0; */
+  color: #1E3A55;
+  /* color: #EEEADC; */
+  text-align: right;
+  font-size: 2.6rem;
+  /* color: #DD8436; */
+  /* #D26824; */
 }
 mark {
   background-color: #ff0;
@@ -198,7 +216,10 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
 body {
+  background-color: #7ecdda;
+  /* #ff9d00; */ 
   color: hsla(0, 0%, 0%, 0.8);
   font-family: georgia, serif;
   font-weight: normal;
@@ -229,12 +250,10 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
   line-height: 1.1;
 }
 h2 {
@@ -246,7 +265,10 @@ h2 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
+  color: #EEEADC;
+  /* #1e3a55; */
+  /* color: inherit; */
+  /* color: #D26824; */
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;

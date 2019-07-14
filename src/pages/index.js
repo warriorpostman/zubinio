@@ -1,65 +1,60 @@
 import React from "react"
-import MuiLink from '@material-ui/core/Link';
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
 
-import './index.css';
+import styled from 'styled-components';
+import Card from '../components/Card';
+
+const IndexContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: .8rem;
+  grid-row-gap: .8rem;
+`;
+
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`zubin`, `dog`]} />
-    <div className="index-container">
+    <IndexContainer>
       <div>
-      <Card>
-        <CardContent>
-          { false &&
-          <Typography gutterBottom variant="h3" component="h1">
-            Zubin.IO
-          </Typography>
-          }
-          <div className="zubin-pic">
+        <Card>
+          <div>
             <Image  />
           </div>
+        </Card>
+        <Card>
           <p>
             This site is a sandbox for some web experiments. 
             It's also a tribute to my old dog Zubin who 
             passed away in 2017.
           </p>
-        </CardContent>
-      </Card>
-    </div>
-    <div>
-      <Card>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Compound Interest
-          </Typography>
-          A simple demo to play around with 
-          calculating <Link to="/compound-interest/">compound interest</Link> 
-        </CardContent>
-      </Card>
-      <div className="index-card-wrapper">
-        <Card>
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              `flexbox`
-            </Typography>
-            A simple demo of flexbox because I still don't get it...
-            <Link to="/flexbox/">flexbox</Link> 
-          </CardContent>
         </Card>
       </div>
+    <div>
+      <Card>
+        <h2>
+          Compound Interest
+        </h2>
+        <p>
+          A simple demo to play around with 
+          calculating <Link to="/compound-interest/">compound interest</Link> 
+        </p>
+      </Card>
+      <Card>
+        <h2>
+          `flexbox`
+        </h2>
+        <p>
+          A simple demo of flexbox because I still don't get it...
+          <Link to="/flexbox/">flexbox</Link> 
+        </p>
+      </Card>
     </div>
-    </div>
+    </IndexContainer>
   </Layout>
 )
 

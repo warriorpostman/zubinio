@@ -1,0 +1,4 @@
+dark-blue: #1e3a55
+dark-orange: #d26824;
+gray: #a4b7ad;
+cream: #eeeadc;
