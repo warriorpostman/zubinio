@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-
 import styled from 'styled-components';
-// import _ from 'lodash';
 
 import Card from '../components/Card'
 import Layout from "../components/layout";
@@ -9,6 +7,7 @@ import SEO from "../components/seo";
 import Chart from '../components/Chart';
 import { compoundInterestAnnualSeries } from '../lib/formula';
 
+// TODO: Extract these to their own file.
 export const ZButton = styled.button`
   background: #DD8436;
   font-family: Roboto;
