@@ -4,15 +4,22 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+// import Joyride from 'react-joyride';
 
 import styled from 'styled-components';
 import Card from '../components/Card';
 
 const IndexContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-column-gap: .8rem;
-  grid-row-gap: .8rem;
+  display: flex;
+
+  & > div {
+    margin-left: 1rem;
+    flex: 1;
+  }
+
+  & > div:first-child {
+    flex: 2;
+  }
 `;
 
 
@@ -20,6 +27,35 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`zubin`, `dog`]} />
     <IndexContainer>
+      <div>
+      <Card>
+        <h2>
+          Compound Interest
+        </h2>
+        <p>
+          A simple demo to play around with 
+          calculating <Link to="/compound-interest/">compound interest</Link> 
+        </p>
+      </Card>
+      <Card>
+        <h2 className="j-target">
+          `ease`
+        </h2>
+        <p>
+          Using `ease` functions with CSS...
+          <Link to="/ease/">ease</Link> 
+        </p>
+      </Card>
+      <Card>
+        <h2 className="j-target">
+          `flexbox`
+        </h2>
+        <p>
+          A simple demo of flexbox because I still don't get it...
+          <Link to="/flexbox/">flexbox</Link> 
+        </p>
+      </Card>
+      </div>
       <div>
         <Card>
           <div>
@@ -34,26 +70,6 @@ const IndexPage = () => (
           </p>
         </Card>
       </div>
-    <div>
-      <Card>
-        <h2>
-          Compound Interest
-        </h2>
-        <p>
-          A simple demo to play around with 
-          calculating <Link to="/compound-interest/">compound interest</Link> 
-        </p>
-      </Card>
-      <Card>
-        <h2>
-          `flexbox`
-        </h2>
-        <p>
-          A simple demo of flexbox because I still don't get it...
-          <Link to="/flexbox/">flexbox</Link> 
-        </p>
-      </Card>
-    </div>
     </IndexContainer>
   </Layout>
 )
