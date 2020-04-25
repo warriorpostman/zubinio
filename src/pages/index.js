@@ -55,6 +55,15 @@ const IndexPage = () => (
           <Link to="/flexbox/">flexbox</Link> 
         </p>
       </Card>
+      <Card>
+        <h2 className="j-target">
+          SVG Stuff
+        </h2>
+        <p>
+          Some SVG demonstrations...
+          <Link to="/svgs/">SVG's</Link> 
+        </p>
+      </Card>
       </div>
       <div>
         <Card>
