@@ -76,6 +76,8 @@ const CompoundInterest = () => {
       Compound interest is sweet. It takes a little bit of stuff
       and turns it into a lot of stuff. The graphs below will help
       visualize the growth of money via the compound interest formula.
+
+      <em>NOTE: Not gonna lie, this demo kinda sucks and needs work.</em> 
     </p>
     <form style={{ 
       display: 'flex',

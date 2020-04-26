@@ -12,8 +12,15 @@ const SvgStep = styled.div`
   border-radius: 5px;
 
   display: flex;
-  p {
+  width: 90%;
+
+  & > p {
+    padding-top: 8%;
+    padding-left: 10%;
+    // margin-left: 1rem;
     flex: 3;
+    height: 100%;
+    text-align: middle;
   }
 
   & > svg {
@@ -60,34 +67,57 @@ const SVG = () => {
               stroke="purple"
               strokeWidth={1} 
             />
+          </svg>
+          <p>
+            Ellipses with SVG: Basic ellipse SVG. Consists of
+            origin coordinates, an x-radius, y-radius and a fill 
+            color of black. Throw in a purple meniscus. Just do that.
+          </p>
+        </SvgStep>
+        <SvgStep>
+          <svg viewBox="0 0 20 20">
+            <ellipse 
+              cx="10" 
+              cy="10" 
+              rx="7.5" 
+              ry="5"
+              fill="black"
+            />
+            <circle 
+              cx="10" cy="10" 
+              r="4.5" 
+              fill="white" />
             </svg>
             <p>
-              A black ellipse: Basic ellipse SVG. Consists of
-              origin coordinates, an x-radius, y-radius and a fill 
-              color of black. Throw in a purple meniscus. Just do that.
+              More Ellipses with SVG: A black ellipse, with an embedded white circle
+              Combined circle and ellipse with coordinates like above.
+              If you play music, this might look like a familiar icon?
             </p>
-          </SvgStep>
+        </SvgStep>
         <SvgStep>
           <svg viewBox="0 0 20 20">
             
             <ellipse 
               cx="10" 
               cy="10" 
-              rx="8" 
-              ry="4"
+              rx="7.5" 
+              ry="5"
               fill="black"
             />
-            <circle 
-              cx="10" cy="10" 
-              r="4" 
-              fill="white" />
+            <ellipse 
+              cx="6" cy="13" 
+              rx="4"
+              ry="5"
+              fill="white" 
+              transform="rotate(-20)"
+            />
             </svg>
             <p>
-              A black ellipse, with an embedded white circle
-              Combined circle and ellipse with coordinates like above.
-              Kinda looks like a musical whole note.
+              Similar to above (black ellipse), but with an embedded white ellipse and hit it with a transform, 
+              Does it kind of look like a musical whole note? 
+              The visual configuration of this SVG is still unappealing though.
             </p>
-        </SvgStep>
+          </SvgStep>
       </Card>
     </Layout>
   );
